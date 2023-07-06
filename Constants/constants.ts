@@ -2,15 +2,15 @@ export const NavLinks = [
     {
         href: '/', id: 1, text: 'Home'
     }, {
-        href: '/', id: 2, text: 'About Us'
+        href: '/about', id: 2, text: 'About Us'
     }
     , {
-        href: '/', id: 3, text: 'Blogs'
+        href: '/blogs', id: 3, text: 'Blogs'
     }
     , {
-        href: '/', id: 4, text: 'Landlords'
+        href: '/landlords', id: 4, text: 'Landlords'
     }
     , {
-        href: '/', id: 5, text: 'Contact Us'
+        href: '/contact', id: 5, text: 'Contact Us'
     }
 ]
