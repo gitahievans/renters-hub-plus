@@ -21,8 +21,8 @@ const Navbar = () => {
 
   return (
     <nav className='flex flex-col'>
-      <section className='hidden md:flex items-center justify-between text-sm font-normal md:px-32 lg:px-48'>
-        <div className='flex items-center md:gap-2 lg:gap-8 flex-wrap'>
+      <section className='hidden md:flex items-center justify-between text-sm font-normal md:px-16 lg:px-48'>
+        <div className='flex items-center md:gap-4 lg:gap-8 flex-wrap'>
           <div className='flex gap-1 items-center'>
             <Image src={callIcon} alt='call' className='w-4 h-6' />
             <p>+2547227395</p>
@@ -55,7 +55,7 @@ const Navbar = () => {
           <h1 className='text-xl md:text-4xl font-semibold'>Renters Hub</h1>
         </Link>
         <>
-          <Image onClick={open} src={menuIcon} alt="menu" className='lg:hidden' />
+          <Image onClick={open} src={menuIcon} alt="menu" className='lg:hidden md:w-12' />
           <Drawer position='right' size='50%' opened={opened} onClose={close}>
             <div className='flex flex-col gap-3'>
               {NavLinks.map(link => {
