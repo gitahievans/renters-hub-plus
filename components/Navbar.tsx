@@ -15,6 +15,9 @@ import MobileNav from './MobileNav'
 const Navbar = () => {
 
   const pathname = usePathname()
+  const inactiveLinkStyles = 'px-3 lg:px-4 py-2 border text-sm lg:text-base font-medium rounded-lg hover:bg-app-green hover:text-white transition-all duration-700'
+  const activeLinkStyles = `bg-accent-color text-white hover:bg-accent-color $px-3 lg:px-4 py-2 border text-sm lg:text-base font-medium rounded-lg transition-all duration-500 hover:text-white`
+
 
   return (
     <nav className='flex flex-col'>
@@ -52,10 +55,10 @@ const Navbar = () => {
           <h1 className='text-xl md:text-4xl font-semibold'>Renters Hub</h1>
         </Link>
         <MobileNav />
-        <ul className='lg:flex hidden text-small md:gap-4 xl:gap-7'>
+        <ul className='lg:flex hidden text-small gap-4 xl:gap-7'>
           {NavLinks.map(link => {
             return (
-              <Link href={link.href} key={link.id} className={pathname === link.href ? `bg-accent-color px-3 lg:px-4 py-2 border text-sm lg:text-base font-medium rounded-lg text-white` : `px-3 lg:px-4 py-2 border text-sm lg:text-base font-medium rounded-lg hover:bg-accent-color hover:text-white`}>
+              <Link href={link.href} key={link.id} className={pathname === link.href ? activeLinkStyles : inactiveLinkStyles}>
                 {link.text}
               </Link>
             )
