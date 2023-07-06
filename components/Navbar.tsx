@@ -4,18 +4,15 @@ import Link from 'next/link'
 import React from 'react'
 import Logo from '@/public/images/logo.png'
 import Image from 'next/image'
-import menuIcon from '@/public/icons/menu.svg';
 import { NavLinks } from '@/Constants/constants';
 import callIcon from '@/public/icons/phone-call.svg';
 import emailIcon from '@/public/icons/email.svg';
 import avatar from '@/public/icons/avatar-man.svg';
 import termsIcon from '@/public/icons/information.svg';
-import CustomButton from './CustomButton';
 import { usePathname } from 'next/navigation';
-import { useDisclosure } from '@mantine/hooks';
-import { Drawer, Button, Group } from '@mantine/core';
+import MobileNav from './MobileNav'
+
 const Navbar = () => {
-  const [opened, { open, close }] = useDisclosure(false);
 
   const pathname = usePathname()
 
@@ -54,20 +51,7 @@ const Navbar = () => {
           <Image src={Logo} alt="logo" className='h-14 w-20' />
           <h1 className='text-xl md:text-4xl font-semibold'>Renters Hub</h1>
         </Link>
-        <>
-          <Image onClick={open} src={menuIcon} alt="menu" className='lg:hidden md:w-12' />
-          <Drawer position='right' size='50%' opened={opened} onClose={close}>
-            <div className='flex flex-col gap-3'>
-              {NavLinks.map(link => {
-                return (
-                  <Link onClick={close} href={link.href} key={link.id} className={pathname === link.href ? `bg-accent-color px-3 lg:px-4 py-2 border text-sm md:text-lg font-medium rounded-lg text-white` : `px-3 lg:px-4 py-2 border text-sm md:text-lg font-medium rounded-lg hover:bg-accent-color hover:text-white`}>
-                    {link.text}
-                  </Link>
-                )
-              })}
-            </div>
-          </Drawer>
-        </>
+        <MobileNav />
         <ul className='lg:flex hidden text-small md:gap-4 xl:gap-7'>
           {NavLinks.map(link => {
             return (
