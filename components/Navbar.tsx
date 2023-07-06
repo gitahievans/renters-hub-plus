@@ -15,8 +15,8 @@ import MobileNav from './MobileNav'
 const Navbar = () => {
 
   const pathname = usePathname()
-  const inactiveLinkStyles = 'px-3 lg:px-4 py-2 border text-sm lg:text-base font-medium rounded-lg hover:bg-app-green hover:text-white transition-all duration-700'
-  const activeLinkStyles = `bg-accent-color text-white hover:bg-accent-color $px-3 lg:px-4 py-2 border text-sm lg:text-base font-medium rounded-lg transition-all duration-500 hover:text-white`
+  const inactiveLinkStyles = 'px-3 lg:px-4 py-2 border text-sm lg:text-base font-medium rounded-lg hover:bg-gray-200 transition-all duration-500'
+  const activeLinkStyles = `bg-accent-color text-white $px-3 lg:px-4 py-2 border text-sm lg:text-base font-medium rounded-lg transition-all duration-500 hover:text-white`
 
 
   return (
