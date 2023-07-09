@@ -52,7 +52,7 @@ export default function Home() {
   const displayedItems = nums.slice(startIndex, endIndex);
 
   return (
-    <div className='bg-slate-50 h-screen py-4 px-1 lg:px-10 '>
+    <div className='bg-slate-50 h-full py-4 px-1 lg:px-10 '>
       <FilterSort />
       <section className='flex flex-col gap-3 mt-4'>
         <div className='flex items-center justify-between'>
