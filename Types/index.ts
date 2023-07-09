@@ -7,3 +7,13 @@ export type CustomButtonProps = {
     btnType: 'button' | "submit",
     handleClick?: MouseEventHandler<HTMLButtonElement>
 }
+
+export type SortButtonType = {
+    width?: string,
+    gap?: string, 
+    hidden: boolean | null,
+    mdTextSize?: string,
+    lgTextSize?: string, //
+    btnBg?: string,
+    hoverBg?: string
+}

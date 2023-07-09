@@ -15,21 +15,22 @@ const Filter = () => {
             <Menu shadow="xl" width={360} closeOnItemClick={false}>
                 {/* Trigger button */}
                 <Menu.Target>
-                    <button type='button' className='btn flex flex-1'>
-                        <Image src={filtersIcon} alt='filter' className='w-8 rotate-90' />
-                        <span>Filters</span>
+                    <button type='button' className='btn flex md:gap-4 hover:bg-app-green rounded-3xl'>
+                        <Image src={filtersIcon} alt='filter' className='w-8 md:w-10 rotate-90' />
+                        <span className='md:text-lg capitalize'>Filters</span>
                     </button>
                 </Menu.Target>
                 {/* Dropdown content */}
                 <Menu.Dropdown>
                     {/* Drop down label */}
                     <Menu.Label>
-                        <span className='text-lg font-semibold'>Filter Property</span>
+                        <span className='text-base font-semibold'>Filter Property</span>
                     </Menu.Label>
                     {/* Dropdown items */}
                     <Menu.Item>
                         <div className='flex items-center gap-4'>
-                            <div className='w-2/5'><label htmlFor="houseType">Property Category</label></div>
+                            <div className='w-2/5'>
+                                <label htmlFor="houseType">Property Category</label></div>
                             <div className='w-3/5'>
                                 <Select
                                     data={[
@@ -41,6 +42,7 @@ const Filter = () => {
                                     searchable
                                     maxDropdownHeight={400}
                                     nothingFound="Not found"
+                                    size='lg'
                                 />
                             </div>
                         </div>
@@ -66,21 +68,26 @@ const Filter = () => {
                                     searchable
                                     maxDropdownHeight={400}
                                     nothingFound="Not found"
+                                    size='lg'
                                 />
                             </div>
                         </div>
                     </Menu.Item>
                     <Menu.Item>
                         <div className='flex items-center gap-4'>
-                            <div className='w-2/5'><label htmlFor="houseType">Price</label></div>
-                            <div className='w-3/5'><Input placeholder='Max price' /></div>
+                            <div className='w-2/5'>
+                                <label htmlFor="houseType">Price</label>
+                            </div>
+                            <div className='w-3/5'>
+                                <Input placeholder='Max price' size='lg' />
+                            </div>
                         </div>
                     </Menu.Item>
                     <Menu.Item>
                         <div className='flex items-center gap-4'>
                             <div className='w-2/5'><label htmlFor="houseType">Location</label></div>
                             <div className='w-3/5'>
-                                <Input placeholder='Kitengela' />
+                                <Input placeholder='Kitengela' size='lg' />
                             </div>
                         </div>
                     </Menu.Item>
