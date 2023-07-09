@@ -14,3 +14,18 @@ export const NavLinks = [
         href: '/contact', id: 5, text: 'Contact Us'
     }
 ]
+
+export const menuItems = [
+    {
+        labelText: "Most Popular",
+    },
+    {
+        labelText: "Highest price first",
+    },
+    {
+        labelText: "Lowest price first",
+    },
+    {
+        labelText: "Recently Added",
+    }
+]

@@ -20,7 +20,7 @@ const MobileNav = () => {
                 <div className='flex flex-col gap-6'>
                     {NavLinks.map(link => {
                         return (
-                            <Link onClick={close} href={link.href} key={link.id} className={pathname === link.href ? `bg-accent-color px-3 lg:px-4 py-2 border text-sm md:text-lg font-medium rounded-lg text-white` : `px-3 lg:px-4 py-2 border text-sm md:text-lg font-medium rounded-lg hover:bg-accent-color hover:text-white`}>
+                            <Link onClick={close} href={link.href} key={link.id} className={pathname === link.href ? `bg-accent-color px-3 lg:px-4 py-2  text-sm md:text-lg font-medium rounded-xl text-white` : `px-3 lg:px-4 py-2  text-sm md:text-lg font-medium rounded-xl hover:bg-gray-200 transition-all duration-500`}>
                                 {link.text}
                             </Link>
                         )
