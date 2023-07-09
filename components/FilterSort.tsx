@@ -8,7 +8,7 @@ import CustomButton from './CustomButton'
 const FilterSort = () => {
 
     return (
-        <section className='px-1 lg:px-10 flex items-end justify-between'>
+        <section className='flex items-end justify-between'>
             <div className='lg:flex items-end gap-4 hidden '>
                 {/* <div className='flex items-center justify-center px-2 gap-2 border py-2 rounded-lg bg-app-green'>
                     <Image src={filtersIcon} alt='filter' className='w-6 h-6 rotate-90' />
@@ -55,9 +55,6 @@ const FilterSort = () => {
                 <TextInput label="Enter Location" size='sm' placeholder='Kitengela' radius='lg' />
 
                 <CustomButton text='Show Results' btnType='button' styles='bg-app-green capitalize' />
-
-
-
             </div>
             <div className='hidden lg:block'>
                 <Sort hidden={true} mdTextSize='lg' lgTextSize='sm' btnBg='app-green' hoverBg='none' />

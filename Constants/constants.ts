@@ -20,10 +20,10 @@ export const menuItems = [
         labelText: "Most Popular",
     },
     {
-        labelText: "Highest Price",
+        labelText: "Highest price first",
     },
     {
-        labelText: "Lowest Price",
+        labelText: "Lowest price first",
     },
     {
         labelText: "Recently Added",
