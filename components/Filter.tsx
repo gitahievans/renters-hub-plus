@@ -15,10 +15,10 @@ const Filter = () => {
             <Menu shadow="xl" width={360} closeOnItemClick={false}>
                 {/* Trigger button */}
                 <Menu.Target>
-                    <button type='button' className='btn flex md:gap-4 hover:bg-app-green rounded-3xl'>
+                    <div className='flex md:gap-4 hover:bg-app-green rounded-2xl px-4 py-2 justify-center border-2 '>
                         <Image src={filtersIcon} alt='filter' className='w-8 md:w-10 rotate-90' />
                         <span className='md:text-lg capitalize'>Filters</span>
-                    </button>
+                    </div>
                 </Menu.Target>
                 {/* Dropdown content */}
                 <Menu.Dropdown>

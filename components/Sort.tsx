@@ -16,10 +16,10 @@ const Sort = ({ width, gap, hidden, mdTextSize, lgTextSize, btnBg, hoverBg }: So
         <Menu shadow="xl" width={360} closeOnItemClick={false} >
             {/* Trigger button */}
             <Menu.Target>
-                <button type='button' className={`btn flex items-center w-${width} gap-${gap} bg-${btnBg} hover:bg-${hoverBg} rounded-3xl px-6`}>
+                <div className={`flex items-center w-${width} gap-${gap} bg-${btnBg} hover:bg-${hoverBg} rounded-2xl px-4 border-2 justify-center py-2`}>
                     <Image src={sortIcon} alt='sorting' className={`w-8 lg:w-6 ${hidden ? 'hidden' : null}`} />
                     <span className={`md:text-${mdTextSize} lg:text-${lgTextSize} capitalize`}>Sort</span>
-                </button>
+                </div>
             </Menu.Target>
             {/* Dropdown content */}
             <Menu.Dropdown>
