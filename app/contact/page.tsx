@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import React from 'react'
-import whatsappIcon from '@/public/icons/whatsapp.svg';
+import whatsappIcon from '@/public/icons/whatsapp-icon.svg';
 import { useMediaQuery } from '@mantine/hooks';
 
 const Contact = () => {
