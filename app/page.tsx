@@ -26,11 +26,15 @@ export default function Home() {
 
   const handlePageChange = (page: number) => {
     setActivePage(page);
-    localStorage.setItem('activePage', page.toString());
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('activePage', page.toString());
+    }
   };
 
   useEffect(() => {
-    localStorage.setItem('activePage', activePage.toString());
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('activePage', activePage.toString());
+    }
   }, [activePage]);
 
   useEffect(() => {
