@@ -12,9 +12,9 @@ import { useMediaQuery } from '@mantine/hooks';
 
 export default function Home() {
   const [twoColumns, setTwoColumns] = useState(false);
-  const [activePage, setActivePage] = useState(parseInt(localStorage.getItem('activePage') || '1'));
+  const [activePage, setActivePage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
-  const [value, setValue] = useState<string | null>(localStorage.getItem('itemsPerPage') || '10');
+  const [value, setValue] = useState<string | null>('10');
   const isSmallScreen = useMediaQuery('(max-width: 640px)')
   const isLargeScreen = useMediaQuery('(min-width: 1440px)')
 
