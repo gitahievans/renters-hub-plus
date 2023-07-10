@@ -15,7 +15,7 @@ const Filter = () => {
             <Menu shadow="xl" width={360} closeOnItemClick={false}>
                 {/* Trigger button */}
                 <Menu.Target>
-                    <div className='flex md:gap-4 hover:bg-app-green rounded-2xl px-4 py-2 justify-center border-2 '>
+                    <div className='flex gap-2 md:gap-4 hover:bg-app-green rounded-2xl px-4 py-2 justify-center items-center  border-2 border-gray-300 '>
                         <Image src={filtersIcon} alt='filter' className='w-8 md:w-10 rotate-90' />
                         <span className='md:text-lg capitalize'>Filters</span>
                     </div>
@@ -30,7 +30,8 @@ const Filter = () => {
                     <Menu.Item>
                         <div className='flex items-center gap-4'>
                             <div className='w-2/5'>
-                                <label htmlFor="houseType">Property Category</label></div>
+                                <label htmlFor="houseType">Property Category</label>
+                            </div>
                             <div className='w-3/5'>
                                 <Select
                                     data={[

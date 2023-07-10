@@ -11,12 +11,27 @@ import { Pagination, Select } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 
 export default function Home() {
-  const [twoColumns, setTwoColumns] = useState(false);
+  const [twoColumns, setTwoColumns] = useState<boolean | undefined>(false);
   const [activePage, setActivePage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [value, setValue] = useState<string | null>('10');
   const isSmallScreen = useMediaQuery('(max-width: 640px)')
   const isLargeScreen = useMediaQuery('(min-width: 1440px)')
+
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const res = await fetch('https://api.rentcast.io/v1/listings/rental/long-term', {
+  //       headers: {
+  //         'X-Api-Key': '95375650c71547a8864a7bb1fc959f3f',
+  //         'X-RapidAPI-Host': 'realtymole-rental-estimate-v1.p.rapidapi.com'
+  //       }
+  //     })
+  //     const data = await res.json()
+  //     console.log(data)
+  //   }
+  //   getData();
+  // }, [])
+
 
   // create an array of 50 items
   const arr = new Array(50);
@@ -89,10 +104,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={`grid grid-cols-${twoColumns ? 2 : 1}  md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  place-items-center gap-4 py-2 h-full`}>
+        <div className={`grid grid-cols-${twoColumns ? 2 : 1}   md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  place-items-center gap-${twoColumns ? 2 : 4} py-2 h-full`}>
           {
             displayedItems.map((n, index) => (
-              <PropertyCard key={index} />
+              <PropertyCard key={index} twoColumns={twoColumns} />
             )
             )}
         </div>
