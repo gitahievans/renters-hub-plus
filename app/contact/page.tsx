@@ -33,7 +33,7 @@ const Contact = () => {
                     </div>
                     <div className="sm:col-span-2">
                         <label htmlFor="message" className="block mb-2 text-sm font-semibold ">Your message</label>
-                        <textarea rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-400 focus:ring-primary-500 focus:border-primary-500 hover:bg-gray-200 focus:bg-gray-50 transition-all duration-500 " placeholder="Leave a comment..."></textarea>
+                        <textarea rows={6} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-400 focus:ring-primary-500 focus:border-primary-500 hover:bg-gray-200 focus:bg-gray-50 transition-all duration-500 " placeholder="Leave a comment..."></textarea>
                     </div>
                     <div className={`flex items-center justify-between w-full `}>
                         <button type="submit" className="btn py-3 px-5 text-sm font-medium text-center rounded-3xl sm:w-fit  focus:ring-4 focus:outline-none bg-accent-color h-fit hover:bg-[#272e40] text-white ">Send message</button>
