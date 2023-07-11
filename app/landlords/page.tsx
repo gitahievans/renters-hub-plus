@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: {
 }
 const Landlords = () => {
     return (
-        <div>Landlords</div>
+        <div className='h-[500px] bg-slate-100'>Landlords</div>
     )
 }
 

@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: {
 }
 const Blog = () => {
   return (
-    <div>Blog</div>
+    <div className='h-[500px] bg-slate-100'>Blog</div>
   )
 }
 
