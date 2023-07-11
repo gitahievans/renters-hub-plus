@@ -17,7 +17,7 @@ const Filter = () => {
                 <Menu.Target>
                     <div className='flex gap-2 md:gap-4 hover:bg-app-green rounded-2xl px-4 py-2 justify-center items-center  border-2 border-gray-300 '>
                         <Image src={filtersIcon} alt='filter' className='w-8 md:w-10 rotate-90' />
-                        <span className='md:text-lg capitalize'>Filters</span>
+                        <span className='md:text-lg capitalize font-semibold'>Filters</span>
                     </div>
                 </Menu.Target>
                 {/* Dropdown content */}

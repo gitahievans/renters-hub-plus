@@ -76,7 +76,7 @@ export default function Home() {
       <section className='flex flex-col gap-3 mt-4'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-4 lg:self-end'>
-            <h3 className='text-xs md:text-sm font-semibold' >Items per page</h3>
+            <h3 className='text-base font-semibold' >Items per page</h3>
             <div className='w-20 md:w-40'>
               <Select
                 data={[
@@ -104,7 +104,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={`grid grid-cols-${twoColumns ? 2 : 1}   md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  place-items-center gap-${twoColumns ? 2 : 4} py-2 h-full`}>
+        <div className={`grid grid-cols-${twoColumns ? 2 : 1}  md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  place-items-center gap-${twoColumns ? 2 : 4} py-2 h-full`}>
           {
             displayedItems.map((n, index) => (
               <PropertyCard key={index} twoColumns={twoColumns} />
