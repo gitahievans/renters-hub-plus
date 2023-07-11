@@ -11,11 +11,11 @@ type twoColType = {
 
 const PropertyCard = ({ twoColumns }: twoColType) => {
     return (
-        <div className={`max-w-sm xl:max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700  `}>
+        <div className={`max-w-sm xl:max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 `}>
             <Link href="#">
                 <Image className={`rounded-t-lg hover:brightness-75 transition-all duration-500`} src={house} alt="House" />
             </Link>
-            <div className={`p-${twoColumns ? '2' : 5} flex flex-col gap-${twoColumns ? '2' : 3}`}>
+            <div className={`p-${twoColumns ? 2 : 5} flex flex-col gap-${twoColumns ? 2 : 3}`}>
                 <h1 className={`mb-2 ${twoColumns ? 'text-[12.5px] font-semibold uppercase' : null} text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white`}>Three Bedroom houses near Oloibon</h1>
                 <div className='flex gap-2 items-center'>
                     <Image src={location} alt='pin-location' className='w-8' />

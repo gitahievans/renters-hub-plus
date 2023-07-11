@@ -52,7 +52,7 @@ const Navbar = () => {
       <hr />
       <section className='flex items-center justify-between py-2 px-1 lg:px-10 '>
         <Link href='/' className='flex gap-1 items-center'>
-          <Image src={Logo} alt="logo" className='h-12 w-16 border-r-4 border-t-4 border-b-4 border-l-4 border-t-accent-color border-l-accent-color border-b-app-green border-r-app-green rounded-full' />
+          <Image src={Logo} alt="logo" className='h-12 w-16 border-r-4 border-t-4 border-b-4 border-l-4 border-t-accent-color border-l-accent-color border-b-app-green border-r-app-green rounded-2xl' />
           <h1 className='text-xl md:text-4xl font-semibold'>Renters Hub</h1>
         </Link>
         <MobileNav />
