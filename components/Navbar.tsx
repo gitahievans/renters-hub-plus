@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import React from 'react'
-import Logo from '@/public/images/logo.png'
+import Logo from '@/public/icons/house.gif'
 import Image from 'next/image'
 import { NavLinks } from '@/Constants/constants';
 import callIcon from '@/public/icons/phone-call.svg';
@@ -16,8 +16,8 @@ import MobileNav from './MobileNav'
 const Navbar = () => {
 
   const pathname = usePathname()
-  const inactiveLinkStyles = 'px-3 lg:px-6 py-2 text-sm lg:text-base font-medium hover:bg-gray-200 border-b-2 border-b-transparent rounded-3xl  transition-all duration-500'
-  const activeLinkStyles = `border-b-2 border-b-accent-color px-3 lg:px-6 py-2 text-sm lg:text-base font-medium transition-all duration-500 `
+  const inactiveLinkStyles = 'px-3 lg:px-6 py-2 text-sm lg:text-lg font-medium hover:bg-gray-200 border-b-2 border-b-transparent rounded-3xl  transition-all duration-500'
+  const activeLinkStyles = `border-b-2 border-b-accent-color px-3 lg:px-6 py-2 text-sm lg:text-lg font-medium transition-all duration-500 `
 
 
   return (
@@ -52,11 +52,11 @@ const Navbar = () => {
       <hr />
       <section className='flex items-center justify-between py-2 px-1 lg:px-10 '>
         <Link href='/' className='flex gap-1 items-center'>
-          <Image src={Logo} alt="logo" className='h-12 w-16 border-r-4 border-t-4 border-b-4 border-l-4 border-t-accent-color border-l-accent-color border-b-app-green border-r-app-green rounded-2xl' />
+          <Image src={Logo} alt="logo" className='h-12 w-16 rounded-2xl' />
           <h1 className='text-xl md:text-4xl font-semibold'>Renters Hub</h1>
         </Link>
         <MobileNav />
-        <div className='lg:flex hidden text-small gap-4 xl:gap-7'>
+        <div className='lg:flex hidden gap-4 xl:gap-7'>
           {NavLinks.map(link => {
             return (
               <Link href={link.href} key={link.id} className={pathname === link.href ? activeLinkStyles : inactiveLinkStyles}>

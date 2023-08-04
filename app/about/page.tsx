@@ -1,4 +1,5 @@
 import React from 'react'
+
 export async function generateMetadata({ params }: {
   params: { id: string }
 }) {
@@ -12,4 +13,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;

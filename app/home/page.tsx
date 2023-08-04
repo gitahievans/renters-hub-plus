@@ -78,14 +78,13 @@ export default function Home() {
       <section className='flex flex-col gap-3 mt-4'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-4 lg:self-end'>
-            <h3 className='text-base font-semibold' >Items per page</h3>
+            <h3 className='text-base font-semibold'>Items per page</h3>
             <div className='w-20 md:w-40'>
               <Select
                 data={[
                   { value: '5', label: '5' },
                   { value: '10', label: '10' },
                   { value: '25', label: '25' },
-
                 ]}
                 placeholder="Select category"
                 searchable
@@ -93,8 +92,7 @@ export default function Home() {
                 value={value}
                 radius='lg'
                 width={10}
-                onChange={setValue}
-              />
+                onChange={setValue} />
             </div>
           </div>
           <div className='md:hidden '>
@@ -107,11 +105,10 @@ export default function Home() {
         </div>
 
         <div className={`grid grid-cols-${twoColumns ? 2 : 1}  md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  place-items-center gap-${twoColumns ? 2 : 4} py-2 h-full`}>
-          {
-            displayedItems.map((n, index) => (
-              <PropertyCard key={index} twoColumns={twoColumns} />
-            )
-            )}
+          {displayedItems.map((n, index) => (
+            <PropertyCard key={index} twoColumns={twoColumns} />
+          )
+          )}
         </div>
       </section>
       <div className='flex items-center justify-center w-full py-4'>
@@ -130,9 +127,9 @@ export default function Home() {
                 border: 0,
               },
             },
-          })}
-        />
+          })} />
       </div>
     </div>
-  
+
+  )
 }

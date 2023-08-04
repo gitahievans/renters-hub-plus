@@ -50,7 +50,7 @@ const FilterSort = () => {
                     nothingFound="Not found"
                 />
 
-                <NumberInput label="Max price" size='sm' placeholder='15000' hideControls radius='lg' />
+                <NumberInput label="Max rent" size='sm' placeholder='15000' hideControls radius='lg' />
 
                 <TextInput label="Enter Location" size='sm' placeholder='Kitengela' radius='lg' />
 

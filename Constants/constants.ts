@@ -1,6 +1,6 @@
 export const NavLinks = [
     {
-        href: '/property', id: 1, text: 'Property'
+        href: '/home', id: 1, text: 'Home'
     }, {
         href: '/about', id: 2, text: 'About Us'
     }

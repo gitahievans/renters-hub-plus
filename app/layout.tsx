@@ -14,7 +14,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* This children property represents the page.tsx file in the app folder */}
       <body className='font-ff-poppins'>
         <Navbar />
         <main>
