@@ -2,7 +2,6 @@
 
 import FilterSort from '@/components/FilterSort'
 import PropertyCard from '@/components/PropertyCard'
-import Sort from '@/components/Sort'
 import Image from 'next/image'
 import oneCard from '@/public/images/square.png';
 import twoCards from '@/public/images/2sections.png';
@@ -134,5 +133,6 @@ export default function Home() {
         />
       </div>
     </div>
-  
+
+  )
 }
