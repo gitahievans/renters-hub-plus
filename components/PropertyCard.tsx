@@ -11,7 +11,7 @@ type twoColType = {
 
 const PropertyCard = ({ twoColumns }: twoColType) => {
     return (
-        <div className={`max-w-sm xl:max-w-md bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700 `}>
+        <div className={`max-w-sm xl:max-w-md bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700 hover:scale-105 transition-all duration-500`}>
             <Link href='#'>
                 <Image className={`rounded-t-lg hover:brightness-75 transition-all duration-500`} src={house} alt="House" />
             </Link>
@@ -24,8 +24,8 @@ const PropertyCard = ({ twoColumns }: twoColType) => {
                 <p className='font-font-2'>Nuru Apartments</p>
                 <p className={`mb-3 font-semibold text-gray-600  text-lg ${twoColumns ? 'text-sm' : null}`}>Ksh. 125000 per month</p>
                 <div className={`${twoColumns ? 'hidden' : 'flex'} items-center justify-between`}>
-                    < CustomButton btnType='button' text='Contact' styles='px-6 bg-transparent text-gray-700 text-xs md:text-sm  hover:bg-accent-color hover:text-white border-gray-400 transition-all duration-500 rounded-xl' />
-                    < CustomButton btnType='button' text='Location' styles='px-6 bg-transparent text-gray-700 text-xs md:text-sm hover:bg-accent-color transition-all duration-500 rounded-xl hover:text-white border-gray-400 ' />
+                    < CustomButton btnType='button' text='Contact' styles='px-6 bg-transparent text-gray-700 text-xs md:text-sm  hover:bg-accent-color hover:text-white border-accent-color transition-all duration-500 rounded-xl' />
+                    < CustomButton btnType='button' text='Location' styles='px-6 bg-transparent text-gray-700 text-xs md:text-sm hover:bg-accent-color transition-all duration-500 rounded-xl hover:text-white border-accent-color' />
                 </div>
                 <div className={`${twoColumns ? 'flex' : 'hidden'} text-black text-base items-center justify-between gap-2`}>
                     <button className='px-2 py-1 rounded-lg border hover:bg-accent-color'>Contact</button>

@@ -53,7 +53,7 @@ const Navbar = () => {
       <section className='flex items-center justify-between py-2 px-1 lg:px-10 '>
         <Link href='/' className='flex gap-1 items-center'>
           <Image src={Logo} alt="logo" className='h-12 w-16 rounded-2xl' />
-          <h1 className='text-xl md:text-4xl font-semibold'>Renters Hub</h1>
+          <h1 className='text-xl md:text-4xl font-semibold text-accent-color'>Renters Hub</h1>
         </Link>
         <MobileNav />
         <div className='lg:flex hidden gap-4 xl:gap-7'>

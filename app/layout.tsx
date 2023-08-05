@@ -1,6 +1,5 @@
 import './globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import MainLayout from '@/components/MainLayout'
 
 export const metadata = {
   title: 'Renters Hub',
@@ -15,11 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='font-ff-poppins'>
-        <Navbar />
-        <main>
-          {children}
-        </main>
-        <Footer />
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   )

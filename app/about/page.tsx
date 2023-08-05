@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <div className='min-h-[100dvh] bg-slate-100 flex flex-col gap-4 py-4 px-1 lg:px-10 '>
+    <div className='min-h-[100dvh] flex flex-col gap-4 py-4 px-1 lg:px-10 '>
       <div>
         <Carousel
           align='start'
