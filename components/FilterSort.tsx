@@ -10,11 +10,6 @@ const FilterSort = () => {
     return (
         <section className='flex items-end justify-between'>
             <div className='lg:flex items-end gap-4 hidden '>
-                {/* <div className='flex items-center justify-center px-2 gap-2 border py-2 rounded-lg bg-app-green'>
-                    <Image src={filtersIcon} alt='filter' className='w-6 h-6 rotate-90' />
-                    <span className='md:text-lg'>Filters</span>
-                </div> */}
-
                 <Select
                     data={[
                         { value: 'Residential', label: 'Residential' },
@@ -29,7 +24,6 @@ const FilterSort = () => {
                     size='sm'
                     radius='lg'
                 />
-
                 <Select
                     data={[
                         { value: 'Bedsitters', label: 'Bedsitters' },

@@ -61,7 +61,7 @@ const SignUpForm = () => {
             </div>
             <div className="mb-4 mt-4 flex items-center justify-center gap-2 md:max-w-sm">
                 <p className="text-base text-gray-600">Already have an account?</p>
-                <Link href='#' className="text-sm font-semibold text-neutral-purple">
+                <Link href='/landlords' className="text-sm font-semibold text-neutral-purple">
                     Log in
                 </Link>
             </div>
