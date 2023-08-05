@@ -48,24 +48,15 @@ const FilterSort = () => {
 
                 <TextInput label="Enter Location" size='sm' placeholder='Kitengela' radius='lg' />
 
-                <CustomButton text='Show Results' btnType='button' styles='bg-app-green capitalize' />
+                <CustomButton text='Show Results' btnType='button' styles='bg-transparent hover:bg-accent-color hover:text-white border border-gray-700 capitalize transition-all duration-500  ease-in-out' />
             </div>
             <div className='hidden lg:block'>
-                <Sort hidden={true} mdTextSize='lg' lgTextSize='sm' btnBg='app-green' hoverBg='none' />
+                <Sort hidden={true} mdTextSize='lg' lgTextSize='sm' btnBg='none' hoverBg='accent-color' />
             </div>
             <div className='lg:hidden grid grid-cols-2 w-full gap-4 '>
                 <Filter />
-                <Sort gap='4' hidden={false} mdTextSize='lg' hoverBg='app-green' />
+                <Sort gap='4' hidden={false} mdTextSize='lg' hoverBg='accent-color' />
             </div>
-
-            {/* <>
-                <Drawer position='top' opened={opened} onClose={close} title="Authentication">
-                </Drawer>
-
-                <Group position="center">
-                    <Button onClick={open}>Open Drawer</Button>
-                </Group>
-            </> */}
         </section>
     )
 }

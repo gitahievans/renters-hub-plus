@@ -86,7 +86,8 @@ const Filter = () => {
                     </Menu.Item>
                     <Menu.Item>
                         <div className='flex items-center gap-4'>
-                            <div className='w-2/5'><label htmlFor="houseType">Location</label></div>
+                            <div className='w-2/5'><label htmlFor="houseType">Location</label>
+                            </div>
                             <div className='w-3/5'>
                                 <Input placeholder='Kitengela' size='lg' />
                             </div>

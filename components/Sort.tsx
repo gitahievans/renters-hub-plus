@@ -16,7 +16,7 @@ const Sort = ({ width, gap, hidden, mdTextSize, lgTextSize, btnBg, hoverBg }: So
         <Menu shadow="xl" width={360} closeOnItemClick={false} >
             {/* Trigger button */}
             <Menu.Target>
-                <div className={`flex items-center w-${width} gap-${gap} bg-${btnBg} hover:bg-${hoverBg} rounded-2xl px-4 border-2 justify-center py-2 border-gray-300 cursor-pointer`}>
+                <div className={`flex items-center w-${width} gap-${gap} bg-${btnBg} hover:bg-${hoverBg} hover:text-white rounded-2xl px-4 border border-gray-600 justify-center py-2 cursor-pointer transition-all duration-500`}>
                     <Image src={sortIcon} alt='sorting' className={`w-8 lg:w-6 ${hidden ? 'hidden' : null}`} />
                     <span className={`md:text-${mdTextSize} lg:text-${lgTextSize} capitalize font-semibold`}>Sort</span>
                 </div>

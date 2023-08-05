@@ -24,8 +24,8 @@ const PropertyCard = ({ twoColumns }: twoColType) => {
                 <p className='font-font-2'>Nuru Apartments</p>
                 <p className={`mb-3 font-semibold text-gray-600  text-lg ${twoColumns ? 'text-sm' : null}`}>Ksh. 125000 per month</p>
                 <div className={`${twoColumns ? 'hidden' : 'flex'} items-center justify-between`}>
-                    < CustomButton btnType='button' text='Contact' styles='px-6 bg-transparent text-gray-700 text-xs md:text-sm  hover:bg-accent-color hover:text-white border-accent-color transition-all duration-500 rounded-xl' />
-                    < CustomButton btnType='button' text='Location' styles='px-6 bg-transparent text-gray-700 text-xs md:text-sm hover:bg-accent-color transition-all duration-500 rounded-xl hover:text-white border-accent-color' />
+                    < CustomButton btnType='button' text='Contact' styles='px-6 bg-transparent text-gray-700 text-xs md:text-sm  hover:bg-accent-color hover:text-white border-gray-500 ytransition-all duration-500 rounded-xl' />
+                    < CustomButton btnType='button' text='Location' styles='px-6 bg-transparent text-gray-700 text-xs md:text-sm hover:bg-accent-color transition-all duration-500 rounded-xl hover:text-white border-gray-500' />
                 </div>
                 <div className={`${twoColumns ? 'flex' : 'hidden'} text-black text-base items-center justify-between gap-2`}>
                     <button className='px-2 py-1 rounded-lg border hover:bg-accent-color'>Contact</button>
