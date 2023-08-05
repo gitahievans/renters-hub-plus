@@ -11,6 +11,15 @@ export type CustomButtonProps = {
     altText?: string
 }
 
+export type CustomInputProps = {
+    labelText: string,
+    placeholderTxt: string,
+    styles?: string,
+    required: boolean,
+    type: string,
+    forHtml: string
+}
+
 export type SortButtonType = {
     width?: string,
     gap?: string, 
@@ -20,3 +29,4 @@ export type SortButtonType = {
     btnBg?: string,
     hoverBg?: string
 }
+

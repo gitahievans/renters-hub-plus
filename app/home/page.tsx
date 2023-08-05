@@ -123,7 +123,7 @@ export default function Home() {
           styles={(theme) => ({
             control: {
               '&[data-active]': {
-                backgroundImage: theme.fn.gradient({ from: 'blue', to: 'green' }),
+                backgroundImage: theme.fn.gradient({ from: 'red', to: 'yellow' }),
                 border: 0,
               },
             },

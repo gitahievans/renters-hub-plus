@@ -1,8 +1,17 @@
+/* eslint-disable react/no-unescaped-entities */
+import CustomButton from '@/components/CustomButton';
+import SignUpForm from '@/components/SignUpForm';
+import Link from 'next/link';
 import React from 'react'
 
 const Landlords = () => {
     return (
-        <div className='h-[500px] bg-slate-100'>Landlords</div>
+        <div className='min-h-[100dvh] min-w-full bg-slate-100 py-4 px-1 lg:px-10'>
+            <section className='flex flex-col items-center '>
+                <h1 className='text-base font-medium'>Register as a Landlord/Property Manager</h1>
+                <SignUpForm />
+            </section>
+        </div>
     )
 }
 
