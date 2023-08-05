@@ -13,7 +13,7 @@ const SignUpForm = () => {
 
     return (
         <form
-            className="mt-8 flex w-full flex-col gap-5 max-w-[360px] md:max-w-sm "
+            className="mt-8 flex w-full flex-col gap-5 max-w-[360px] md:max-w-md "
         >
             <div className=''>
                 <input type="file" name="" id="" />
