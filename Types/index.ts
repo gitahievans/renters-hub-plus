@@ -1,3 +1,4 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props"
 import { StaticImageData } from "next/image"
 import { MouseEventHandler } from "react"
 
@@ -6,6 +7,8 @@ export type CustomButtonProps = {
     styles?: string,
     btnType: 'button' | "submit",
     handleClick?: MouseEventHandler<HTMLButtonElement>
+    source?: string | StaticImport,
+    altText?: string
 }
 
 export type SortButtonType = {
@@ -13,7 +16,7 @@ export type SortButtonType = {
     gap?: string, 
     hidden: boolean | null,
     mdTextSize?: string,
-    lgTextSize?: string, //
+    lgTextSize?: string, 
     btnBg?: string,
     hoverBg?: string
 }

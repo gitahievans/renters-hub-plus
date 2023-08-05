@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'ff-poppins': ['Poppins', 'sans-serif'],
+        'font-2': ['Sofia Sans', 'sans-serif']
       },
       colors: {
         'accent-color': '#2339d6',
