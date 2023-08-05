@@ -1,5 +1,5 @@
+import MainLayout from '../components/MainLayout'
 import './globals.css'
-import MainLayout from '@/components/MainLayout'
 
 export const metadata = {
   title: 'Renters Hub',

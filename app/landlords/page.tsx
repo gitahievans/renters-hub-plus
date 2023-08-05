@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import LoginForm from '@/components/LoginForm';
+import LoginForm from '../../components/LoginForm'
 import Image from 'next/image';
 import Logo from '@/public/icons/house.gif'
 
