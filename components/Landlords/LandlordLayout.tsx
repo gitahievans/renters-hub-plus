@@ -6,7 +6,7 @@ const LandlordLayout = ({ children, }: { children: React.ReactNode }) => {
     return (
         <div className="flex flex-col">
             <LandlordHeader />
-            <div>
+            <div className='bg-slate-50'>
                 <LanlordSidebar />
                 <main className='lg:ml-80'>{children}</main>
             </div>

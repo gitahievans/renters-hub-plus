@@ -8,7 +8,7 @@ const LanlordSidebar = () => {
     const { sidebarOpen } = useContext(SidebarContext)
 
     return (
-        <aside id="default-sidebar" className={`w-72 h-screen transition-transform ${sidebarOpen ? '' : '-translate-x-full lg:translate-x-0'} lg:block lg:w-72 fixed left-0 z-50 bg-white h-screen`} aria-label="Sidebar">
+        <aside id="default-sidebar" className={`w-72 h-screen transition-transform ${sidebarOpen ? '' : '-translate-x-full lg:translate-x-0'} lg:block lg:w-72 fixed left-0 z-50 bg-white h-screen border-r border-r-gray-300`} aria-label="Sidebar">
             <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50">
                 <ul className="space-y-5 font-medium">
                     <li><Link href='/landlords/overview'>
