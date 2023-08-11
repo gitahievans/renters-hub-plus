@@ -1,3 +1,4 @@
+import { SidebarProvider } from '@/Context/SidebarContext'
 import LandlordLayout from '@/components/Landlords/LandlordLayout'
 
 export const metadata = {
@@ -13,7 +14,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className='font-ff-poppins'>
-                <LandlordLayout>{children}</LandlordLayout>
+                <SidebarProvider>
+                    <LandlordLayout>{children}</LandlordLayout>
+                </SidebarProvider>
             </body>
         </html>
     )
