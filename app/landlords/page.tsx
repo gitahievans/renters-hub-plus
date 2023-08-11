@@ -1,9 +1,9 @@
-import React from 'react'
-
-const Landlords = () => {
-  return (
-    <div>page</div>
-  )
+const LandlordsLogin = () => {
+    return (
+        <div className='min-h-[100dvh] min-w-full py-4 px-1 lg:px-10'>
+           
+        </div>
+    )
 }
 
-export default Landlords;
+export default LandlordsLogin;

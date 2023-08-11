@@ -14,7 +14,7 @@ const LoginForm = () => {
             <CustomButton text='Login' btnType='submit' styles='bg-accent-color text-white hover:bg-blue-900 rounded-lg' />
             <div className="mb-4 mt-4 flex items-center justify-center gap-2 md:max-w-sm">
                 <p className="text-base text-gray-600">No account yet?</p>
-                <Link href='/signup' className="text-sm font-semibold text-neutral-purple">
+                <Link href='/landlords-auth/signup' className="text-sm font-semibold text-neutral-purple">
                     Register
                 </Link>
             </div>

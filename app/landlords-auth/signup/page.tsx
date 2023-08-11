@@ -9,7 +9,6 @@ const Signup = () => {
             <section className='flex flex-col items-center'>
                 <Image src={Logo} alt='RentersHub' className='mb-12' />
                 <h1 className='text-xl font-medium text-center'>Register as a Landlord (Property Manager)
-
                 </h1>
                 <SignUpForm />
             </section>

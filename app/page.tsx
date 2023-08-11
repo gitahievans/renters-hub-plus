@@ -8,7 +8,8 @@ import twoCards from '@/public/images/2sections.png';
 import { useEffect, useState } from 'react'
 import { Pagination, Select } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [twoColumns, setTwoColumns] = useState<boolean | undefined>(false);
@@ -72,67 +73,70 @@ export default function Home() {
 
   return (
 
-    <div className='bg-slate-50 h-full py-4 px-1 lg:px-10 '>
-      <FilterSort />
-      <section className='flex flex-col gap-3 mt-4'>
-        <div className='flex items-center justify-between'>
-          <div className='flex items-center gap-4 lg:self-end'>
-            <h3 className='text-base font-semibold' >Items per page</h3>
-            <div className='w-20 md:w-40'>
-              <Select
-                data={[
-                  { value: '5', label: '5' },
-                  { value: '10', label: '10' },
-                  { value: '25', label: '25' },
+    <>
+      <Navbar />
+      <div className='bg-slate-50 h-full py-4 px-1 lg:px-10 '>
+        <FilterSort />
+        <section className='flex flex-col gap-3 mt-4'>
+          <div className='flex items-center justify-between'>
+            <div className='flex items-center gap-4 lg:self-end'>
+              <h3 className='text-base font-semibold' >Items per page</h3>
+              <div className='w-20 md:w-40'>
+                <Select
+                  data={[
+                    { value: '5', label: '5' },
+                    { value: '10', label: '10' },
+                    { value: '25', label: '25' },
 
-                ]}
-                placeholder="Select category"
-                searchable
-                size='xs'
-                value={value}
-                radius='lg'
-                width={10}
-                onChange={setValue}
-              />
+                  ]}
+                  placeholder="Select category"
+                  searchable
+                  size='xs'
+                  value={value}
+                  radius='lg'
+                  width={10}
+                  onChange={setValue}
+                />
+              </div>
+            </div>
+            <div className='md:hidden '>
+              <div className='flex items-center justify-end gap-2'>
+                <Image src={oneCard} alt='one-column' className={`w-6 h-5 cursor-pointer bg-${!twoColumns ? 'app-green rounded-sm' : null} `} onClick={handleOneSection} />
+
+                <Image src={twoCards} alt='two-columns' className={`w-8 h-[32px] cursor-pointer bg-${twoColumns ? 'app-green rounded-md' : null}`} onClick={handleTwoSections} />
+              </div>
             </div>
           </div>
-          <div className='md:hidden '>
-            <div className='flex items-center justify-end gap-2'>
-              <Image src={oneCard} alt='one-column' className={`w-6 h-5 cursor-pointer bg-${!twoColumns ? 'app-green rounded-sm' : null} `} onClick={handleOneSection} />
 
-              <Image src={twoCards} alt='two-columns' className={`w-8 h-[32px] cursor-pointer bg-${twoColumns ? 'app-green rounded-md' : null}`} onClick={handleTwoSections} />
-            </div>
+          <div className={`grid grid-cols-${twoColumns ? 2 : 1}  md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  place-items-center gap-${twoColumns ? 2 : 4} py-2 h-full`}>
+            {
+              displayedItems.map((n, index) => (
+                <PropertyCard key={index} twoColumns={twoColumns} />
+              )
+              )}
           </div>
-        </div>
-
-        <div className={`grid grid-cols-${twoColumns ? 2 : 1}  md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  place-items-center gap-${twoColumns ? 2 : 4} py-2 h-full`}>
-          {
-            displayedItems.map((n, index) => (
-              <PropertyCard key={index} twoColumns={twoColumns} />
-            )
-            )}
-        </div>
-      </section>
-      <div className='flex items-center justify-center w-full py-4'>
-        <Pagination
-          value={activePage}
-          onChange={handlePageChange}
-          total={totalPages}
-          withEdges
-          radius='md'
-          spacing={isSmallScreen ? 'sm' : 'lg'}
-          size={isSmallScreen ? 'sm' : isLargeScreen ? 'xl' : 'lg'}
-          styles={(theme) => ({
-            control: {
-              '&[data-active]': {
-                backgroundImage: theme.fn.gradient({ from: 'red', to: 'yellow' }),
-                border: 0,
+        </section>
+        <div className='flex items-center justify-center w-full py-4'>
+          <Pagination
+            value={activePage}
+            onChange={handlePageChange}
+            total={totalPages}
+            withEdges
+            radius='md'
+            spacing={isSmallScreen ? 'sm' : 'lg'}
+            size={isSmallScreen ? 'sm' : isLargeScreen ? 'xl' : 'lg'}
+            styles={(theme) => ({
+              control: {
+                '&[data-active]': {
+                  backgroundImage: theme.fn.gradient({ from: 'red', to: 'yellow' }),
+                  border: 0,
+                },
               },
-            },
-          })}
-        />
+            })}
+          />
+        </div>
       </div>
-    </div>
-
+      <Footer />
+    </>
   )
 }

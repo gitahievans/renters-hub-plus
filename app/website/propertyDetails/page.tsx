@@ -44,7 +44,7 @@ const PropertyDetails = () => {
 
     return (
         <div className='min-h-screen bg-slate-100 flex flex-col gap-8 py-4 px-2 lg:px-10 '>
-            <div className='flex flex-col gap-3'>
+            <div className='flex flexprofile--col gap-3'>
                 <Carousel
                     align='start'
                     slideGap='sm'
