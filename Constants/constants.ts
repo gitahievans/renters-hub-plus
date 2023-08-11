@@ -1,3 +1,6 @@
+import { GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+
+
 export const NavLinks = [
     {
         href: '/website/home', id: 1, text: 'Home'
