@@ -4,11 +4,11 @@ import LanlordSidebar from './LandlordSidebar';
 
 const LandlordLayout = ({ children, }: { children: React.ReactNode }) => {
     return (
-        <div className="bg-green-100">
-            <LanlordSidebar />
+        <div className="flex flex-col">
+            <LandlordHeader />
             <div>
-                <LandlordHeader />
-                <main className="lg:ml-[280px]">{children}</main>
+                <LanlordSidebar />
+                <main className='lg:ml-80'>{children}</main>
             </div>
         </div>
     )
