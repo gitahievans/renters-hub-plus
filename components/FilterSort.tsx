@@ -48,7 +48,7 @@ const FilterSort = () => {
 
                 <TextInput label="Enter Location" size='sm' placeholder='Kitengela' radius='lg' />
 
-                <CustomButton text='Show Results' btnType='button' styles='bg-transparent hover:bg-accent-color hover:text-white border border-gray-700 capitalize transition-all duration-500  ease-in-out' />
+                <CustomButton text='Show Results' btnType='button' styles='bg-transparent hover:bg-accent-color text-accent-color hover:text-white border border-gray-700 capitalize transition-all duration-500  ease-in-out' />
             </div>
             <div className='hidden lg:block'>
                 <Sort hidden={true} mdTextSize='lg' lgTextSize='sm' btnBg='none' hoverBg='accent-color' />
