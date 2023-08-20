@@ -11,8 +11,8 @@ const LoginForm = () => {
             <CustomInput forHtml='id' labelText='ID Number' placeholderTxt='********' required={false} type='number' />
             <CustomInput forHtml='password' placeholderTxt="*********" type="password" labelText='Enter Password' required={false} />
             <Link href='#' ><span>Forgot password?</span></Link>
-            <Link href='/landlords/overview' className='w-full'>
-                <CustomButton text='Login' btnType='submit' styles='bg-accent-color text-white hover:bg-blue-900 rounded-lg w-full'/>
+            <Link href='/landlords' className='w-full'>
+                <CustomButton text='Login' btnType='submit' styles='bg-accent-color text-white hover:bg-blue-900 rounded-lg w-full' />
             </Link>
             <div className="mb-4 mt-4 flex items-center justify-center gap-2 md:max-w-sm">
                 <p className="text-base text-gray-600">No account yet?</p>
