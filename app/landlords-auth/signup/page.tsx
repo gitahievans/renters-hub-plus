@@ -1,7 +1,7 @@
 import React from 'react'
-import Logo from '@/public/icons/house.gif'
+import Logo from '@/public/icons/apartment.png'
 import Image from 'next/image';
-import SignUpForm from '@/components/SignUpForm';
+import SignUpForm from '@/components/Landlords/SignUpForm';
 
 const Signup = () => {
     return (
