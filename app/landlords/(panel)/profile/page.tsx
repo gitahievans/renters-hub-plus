@@ -18,7 +18,7 @@ const Profile = () => {
                 <CustomInput labelText='Phone Number' forHtml='phoneNumber' placeholderTxt='**********' required={false} type='tel' />
             </div>
             <div>
-                <CustomButton btnType='button' text='Save' styles='w-full mt-10 bg-accent-color text-white'/>
+                <CustomButton btnType='button' text='Save' styles='w-full mt-10 bg-accent-color text-white hover:bg-blue-950'/>
             </div>
         </section>
     )
