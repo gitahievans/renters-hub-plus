@@ -1,11 +1,11 @@
 import React from 'react'
-import sortIcon from '@/public/icons/sort-icon.svg';
+import sortIcon from '@/public/icons/sort.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const TableHead = () => {
     return (
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+        <thead className="text-xs uppercase bg-gradient-to-r from-blue-950 from-60% to bg-purple-900 text-white">
             <tr>
                 <th scope="col" className="p-4">
                     <div className="flex items-center">
@@ -20,7 +20,7 @@ const TableHead = () => {
                     <div className="flex items-center">
                         Property Name
                         <Link href="#">
-                            <Image src={sortIcon} alt='sort'/>
+                            <Image src={sortIcon} alt='sort' className='h-5 w-5'/>
                         </Link>
                     </div>
                 </th>
@@ -28,7 +28,7 @@ const TableHead = () => {
                     <div className="flex items-center">
                         Posted on
                         <Link href="#">
-                            <Image src={sortIcon} alt='sort'/>
+                            <Image src={sortIcon} alt='sort' className='h-5 w-5' />
                         </Link>
                     </div>
                 </th>
@@ -36,7 +36,7 @@ const TableHead = () => {
                     <div className="flex items-center">
                         Status
                         <Link href="#">
-                            <Image src={sortIcon} alt='sort'/>
+                            <Image src={sortIcon} alt='sort' className='h-5 w-5'/>
                         </Link>
                     </div>
                 </th>

@@ -36,26 +36,26 @@ const TablePagination = () => {
     const startIndex = (activePage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const displayedItems = nums.slice(startIndex, endIndex);
-  return (
-      <div className='flex items-center justify-center w-full py-4'>
-          <Pagination
-              value={activePage}
-              onChange={handlePageChange}
-              total={totalPages}
-              withEdges
-              radius='md'
-              spacing={isSmallScreen ? 'sm' : 'lg'}
-              size='sm'
-              styles={(theme) => ({
-                  control: {
-                      '&[data-active]': {
-                          backgroundImage: theme.fn.gradient({ from: 'red', to: 'yellow' }),
-                          border: 0,
-                      },
-                  },
-              })} />
-      </div>
-  )
+    return (
+        <div className='flex items-center justify-center w-full py-4 bg-gradient-to-r from-blue-950 from-60% to bg-purple-950 '>
+            <Pagination
+                value={activePage}
+                onChange={handlePageChange}
+                total={totalPages}
+                withEdges
+                radius='md'
+                spacing={isSmallScreen ? 'sm' : 'lg'}
+                size='sm'
+                styles={(theme) => ({
+                    control: {
+                        '&[data-active]': {
+                            backgroundImage: theme.fn.gradient({ from: 'red', to: 'yellow' }),
+                            border: 0,
+                        },
+                    },
+                })} />
+        </div>
+    )
 }
 
 export default TablePagination;
