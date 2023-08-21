@@ -1,5 +1,9 @@
 import { GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-
+import dashboardIcon from '@/public/icons/dashboard-icon.svg';
+import addPropertyIcon from '@/public/icons/add-prop-icon.svg';
+import managePropertyIcon from '@/public/icons/manage-prop-icon.svg';
+import propertyStatsIcon from '@/public/icons/stats-icon.svg';
+import { LandlordsSideBarItems } from '@/Types';
 
 export const NavLinks = [
     {
@@ -163,3 +167,31 @@ export const columns: GridColDef[] = [
     { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
   ];
+
+
+  export const landlordsSideBarItems: LandlordsSideBarItems[] = [
+    {
+      href: '/landlords',
+      icon: dashboardIcon,
+      altText: 'dashboard',
+      text: 'Dashboard'
+    },
+    {
+      href: '/landlords/add-property',
+      icon: addPropertyIcon,
+      altText: 'add-property',
+      text: 'Add Property'
+    },
+    {
+      href: '/landlords/manage-property',
+      icon: managePropertyIcon,
+      altText: 'manage-property',
+      text: 'Manage Property'
+    },
+    {
+      href: '/landlords/stats',
+      icon: propertyStatsIcon,
+      altText: 'property stats',
+      text: 'Property Stats'
+    },
+  ]
