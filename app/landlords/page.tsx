@@ -28,9 +28,9 @@ const Overview = () => {
                 <h2>Manage your property here: <span className='font-semibold text-green-500'>13 Property</span></h2>
                 <CustomButton text='Add property' btnType='button' styles='rounded-lg bg-gray-200 text-black hover:bg-blue-800 hover:text-white md:w-1/2' />
             </div>
-            <div className='flex flex-col gap-4 mx-auto w-full bg-gray-600 p-2 rounded-lg'>
+            <div className='flex flex-col gap-4 mx-auto w-full p-2 rounded-lg'>
                 <div className='w-full flex justify-between items-center '>
-                    <p className='text-white text-xl font-semibold'>Your property</p>
+                    <p className='text-gray-950 text-xl font-semibold'>Your property</p>
                 </div>
                 <OverviewTable />
             </div>

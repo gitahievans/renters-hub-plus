@@ -11,9 +11,9 @@ const AddProperty = () => {
 
   return (
     <div className='flex flex-col gap-3 min-h-full p-1 my-2 max-w-7xl mx-auto'>
-      <h1 className='text-2xl font-semibold text-gray-200'>Add New Property</h1>
+      <h1 className='text-2xl font-semibold'>Add New Property</h1>
       <form action="" className='flex flex-col gap-3' >
-        <div className='flex flex-col md:grid md:grid-cols-2 gap-3 w-full  bg-gradient-to-r from-gray-800 from-30% to-purple-900 text-white p-2 rounded-lg md:mx-auto'>
+        <div className='flex flex-col md:grid md:grid-cols-2 gap-3 w-full bg-gray-100 p-2 rounded-lg md:mx-auto'>
           <Select data={[
             { value: '5', label: '5' },
             { value: '10', label: '10' },
@@ -21,15 +21,15 @@ const AddProperty = () => {
           ]}
             placeholder="Select category"
             searchable
-            size='sm'
+            size='md'
             value={value}
             radius='md'
             width={10}
             onChange={setValue}
             label='Property Category'
-            styles={{ label: { color: 'white', fontWeight: 'bold' }}}
+            styles={
+              { label: { color: 'black', fontWeight: 'bold' }}}
           />
-          
           <CustomInput forHtml='location' type='number' labelText='Enter Location Number (You can edit)' placeholderTxt='0739832893' required={true} />
           <Select data={[
             { value: '5', label: '5' },
@@ -38,13 +38,13 @@ const AddProperty = () => {
           ]}
             placeholder="Select category"
             searchable
-            size='sm'
+            size='md'
             value={value}
             radius='md'
             width={10}
             onChange={setValue}
             label='Select County'
-            styles={{ label: { color: 'white', fontWeight: 'bold' } }}
+            styles={{ label: { color: 'black', fontWeight: 'bold' } }}
           />
           <CustomInput forHtml='location' type='number' labelText='Managed by' placeholderTxt='0739832893' required={true} />
           <CustomInput forHtml='location' type='number' labelText='Property Name' placeholderTxt='0739832893' required={true} />
@@ -56,18 +56,18 @@ const AddProperty = () => {
           ]}
             placeholder="Select category"
             searchable
-            size='sm'
+            size='md'
             value={value}
             radius='md'
             width={10}
             onChange={setValue}
             label='Select Payment Basis:'
-            styles={{ label: { color: 'white', fontWeight: 'bold' } }}
+            styles={{ label: { color: 'black', fontWeight: 'bold' } }}
           />
-          <Textarea label="Property description" styles={{ label: { color: 'white', fontWeight: 'bold' } }} />
+          <Textarea label="Property description" styles={{ label: { color: 'black', fontWeight: 'bold' } }} />
         </div>
 
-        <div className='flex flex-col gap-3 bg-white mt-2 p-2'>
+        <div className='flex flex-col gap-3 bg-gray-100 rounded-lg mt-2 p-2'>
           <h1 className='text-xl font-semibold'>Features List (Tick appropriately)
           </h1>
           <div className='flex flex-col md:grid md:grid-cols-4 gap-3'>
@@ -81,7 +81,7 @@ const AddProperty = () => {
             }
           </div>
         </div>
-        <div className='flex flex-col gap-3 mt-6 p-2 bg-white'>
+        <div className='flex flex-col gap-3 mt-6 p-2 bg-gray-100 rounded-lg'>
           <h1 className='text-xl font-semibold'>Select Images</h1>
           <div className='flex flex-col md:flex-row gap-3'>
             <div className='flex flex-col gap-1'>

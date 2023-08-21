@@ -14,9 +14,9 @@ const OverviewTable = () => {
     return (
 
         <div className="relative overflow-x-auto sm:rounded-lg">
-            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-950 from-60% to bg-purple-900 ">
+            <div className="flex items-center justify-between p-4 bg-gray-300 ">
                 <div className='flex items-center gap-4 lg:self-end'>
-                    <h3 className='text-base font-semibold text-white'>Items</h3>
+                    <h3 className='text-base font-semibold text-gray-700'>Items</h3>
                     <div className='w-20 md:w-40'>
                         <Select
                             data={[

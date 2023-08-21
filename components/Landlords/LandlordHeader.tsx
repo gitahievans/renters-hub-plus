@@ -10,7 +10,7 @@ const LandlordHeader = () => {
     const { sidebarOpen, setSidebarOpen } = useContext(SidebarContext)
 
     return (
-        <nav className="w-full bg-accent-color text-white border-b border-gray-200 ">
+        <nav className="w-full bg-accent-color text-white border-b border-gray-200 sticky top-0 z-40">
             <div className="px-3 py-3 lg:px-5 lg:pl-3">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center justify-start gap-4" >

@@ -37,7 +37,7 @@ const TablePagination = () => {
     const endIndex = startIndex + itemsPerPage;
     const displayedItems = nums.slice(startIndex, endIndex);
     return (
-        <div className='flex items-center justify-center w-full py-4 bg-gradient-to-r from-blue-950 from-60% to bg-purple-950 '>
+        <div className='flex items-center justify-center w-full py-4 bg-gray-300 text-gray-800'>
             <Pagination
                 value={activePage}
                 onChange={handlePageChange}
