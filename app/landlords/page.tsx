@@ -5,49 +5,38 @@ import Logo from "@/public/icons/house-location.png";
 import Image from 'next/image';
 import CustomButton from '@/components/CustomButton';
 import Link from 'next/link';
-import { DataGrid } from '@mui/x-data-grid';
-import { columns, rows } from '@/Constants/constants';
+import OverviewTable from '@/components/Landlords/OverviewTable/OverviewTable';
+import userIcon from '@/public/icons/user.png';
 
 const Overview = () => {
 
     return (
-        <div className='flex flex-col gap-3 min-h-full p-1 my-2 md:max-w-3xl lg:max-w-full mx-auto'>
-            <div className='flex flex-col gap-2 w-full bg-white p-2 rounded-lg '>
+        <div className='flex flex-col gap-3 min-h-full p-1 my-2 md:max-w-3xl lg:max-w-7xl mx-auto'>
+            <div className='flex flex-col gap-2 w-full lg:w-1/2 bg-gradient-to-r from-blue-950 to-purple-800 p-2 rounded-lg text-white'>
                 <div className='flex gap-2'>
                     <p>Username: </p>
                     <p>34495002</p>
                 </div>
                 <div className='flex gap-2'>
                     <p>Account Status: </p>
-                    <p>Pending</p>
+                    <p className='text-yellow-600'>Pending</p>
                 </div>
             </div>
-            <div className='flex flex-col gap-4 w-full bg-white shadow-xl p-2 rounded-lg md:mx-auto'>
+            <div className='flex flex-col gap-4 w-full lg:w-1/2  bg-white p-2 rounded-lg bg-gradient-to-r from-blue-950 to-purple-800 text-white'>
                 <div className='w-full flex justify-between items-center '>
-                    <h1>Welcome <span className='font-semibold'>Evans Gitahi</span>
+                    <h1>Welcome <span className='font-semibold text-green-500'>Evans Gitahi</span>
                     </h1>
-                    <Image src={Logo} alt='logo' className='w-12' />
+                    <Image src={userIcon} alt='logo' className='w-20 ring-2 ring-white rounded-full bg-slate-200' />
                 </div>
                 <hr />
-                <h2>Manage your property here: <span className='font-semibold'>13 Property</span></h2>
-                <CustomButton text='Add property' btnType='button' styles='rounded-lg bg-accent-color text-white hover:bg-blue-800 md:w-2/5 lg:w-1/5' />
+                <h2>Manage your property here: <span className='font-semibold text-green-500'>13 Property</span></h2>
+                <CustomButton text='Add property' btnType='button' styles='rounded-lg bg-gray-300 text-black hover:bg-blue-800 hover:text-white md:w-1/2' />
             </div>
-            <div className='flex flex-col gap-4 mx-auto w-full bg-white shadow-xl p-2 rounded-lg'>
+            <div className='flex flex-col gap-4 mx-auto w-full bg-white p-2 rounded-lg'>
                 <div className='w-full flex justify-between items-center '>
-                    <p >Latest listed property</p>
-                    <Link href='#' className='text-blue-600 underline underline-offset-2 cursor-pointer'>View all</Link>
+                    <p >Your property</p>
                 </div>
-
-                <DataGrid
-                    rows={rows}
-                    columns={columns}
-                    initialState={{
-                        pagination: {
-                            paginationModel: { page: 0, pageSize: 5 },
-                        },
-                    }}
-                    pageSizeOptions={[5, 10]}
-                />
+                <OverviewTable />
             </div>
         </div>
     )
