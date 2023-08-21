@@ -13,7 +13,7 @@ const LanlordSidebar = () => {
     };
 
     return (
-        <aside id="default-sidebar" className={`w-72 transition-transform lg:block lg:w-72 fixed left-0 z-50 bg-white h-screen border-r border-r-gray-300`} aria-label="Sidebar">
+        <aside id="default-sidebar" className={`w-72 h-screen transition-transform ${sidebarOpen ? '' : '-translate-x-full lg:translate-x-0'} lg:block lg:w-72 fixed left-0 z-50 bg-white h-screen border-r border-r-gray-300`} aria-label="Sidebar">
             <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50">
                 <ul className="space-y-5 font-medium">
                     <li><Link href='/landlords'>
@@ -67,7 +67,7 @@ const LanlordSidebar = () => {
                     </button>
                     <ul id="dropdown-example" className={`py-2 space-y-2 ${dropdownOpen ? 'block' : 'hidden'}`}>
                         <li>
-                            <Link href="#" className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Edit Profile</Link>
+                            <Link href="/landlords/profile" className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Edit Profile</Link>
                         </li>
                         <li>
                             <Link href="#" className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Logout</Link>
