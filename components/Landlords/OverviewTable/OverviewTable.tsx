@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react'
 import Dropdown from './Dropdown';
 import Search from './Search';
@@ -9,8 +8,8 @@ import TablePagination from './TablePagination';
 const OverviewTable = () => {
     return (
 
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <div className="flex items-center justify-between pb-4 bg-white ">
+        <div className="relative overflow-x-auto sm:rounded-lg">
+            <div className="flex items-center justify-between p-4 bg-white ">
                 <div>
                     <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" className="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5" type="button">
                         <span className="sr-only">Action button</span>
@@ -27,7 +26,7 @@ const OverviewTable = () => {
                 <TableHead />
                 <tbody>
                     {
-                        [1, 2, 3, 4, 5].map(num => (
+                        [1, 2, 3, 4, 5, 6, 7, 8].map(_ => (
                             <TableRow key={crypto.randomUUID()} />
                         ))
                     }
