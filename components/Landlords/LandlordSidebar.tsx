@@ -2,13 +2,18 @@
 
 import { SidebarContext } from '@/Context/SidebarContext';
 import Link from 'next/link';
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 const LanlordSidebar = () => {
     const { sidebarOpen } = useContext(SidebarContext)
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
 
     return (
-        <aside id="default-sidebar" className={`w-72 h-screen transition-transform ${sidebarOpen ? '' : '-translate-x-full lg:translate-x-0'} lg:block lg:w-72 fixed left-0 z-50 bg-white h-screen border-r border-r-gray-300`} aria-label="Sidebar">
+        <aside id="default-sidebar" className={`w-72 transition-transform lg:block lg:w-72 fixed left-0 z-50 bg-white h-screen border-r border-r-gray-300`} aria-label="Sidebar">
             <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50">
                 <ul className="space-y-5 font-medium">
                     <li><Link href='/landlords'>
@@ -51,16 +56,23 @@ const LanlordSidebar = () => {
                             </div>
                         </Link>
                     </li>
-                    <li>
-                        <Link href='/landlords/account'>
-                            <div className="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 group">
-                                <svg className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                                    <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
-                                </svg>
-                                <span className="flex-1 ml-3 whitespace-nowrap">My Account</span>
-                            </div>
-                        </Link>
-                    </li>
+                    <button type="button" onClick={toggleDropdown} className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group" aria-controls="dropdown-example" >
+                        <svg className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 21">
+                            <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
+                        </svg>
+                        <span className="flex-1 ml-3 text-left whitespace-nowrap">E-commerce</span>
+                        <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                        </svg>
+                    </button>
+                    <ul id="dropdown-example" className={`py-2 space-y-2 ${dropdownOpen ? 'block' : 'hidden'}`}>
+                        <li>
+                            <Link href="#" className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Edit Profile</Link>
+                        </li>
+                        <li>
+                            <Link href="#" className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Logout</Link>
+                        </li>
+                    </ul>
                 </ul>
             </div>
         </aside>
