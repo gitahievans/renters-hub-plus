@@ -11,9 +11,9 @@ const AddProperty = () => {
 
   return (
     <div className='flex flex-col gap-3 min-h-full p-1 my-2 max-w-7xl mx-auto'>
-      <h1 className='text-2xl font-semibold'>Add New Property</h1>
+      <h1 className='text-2xl font-semibold text-gray-200'>Add New Property</h1>
       <form action="" className='flex flex-col gap-3' >
-        <div className='flex flex-col md:grid md:grid-cols-2 gap-3 w-full bg-white p-2 rounded-lg md:mx-auto'>
+        <div className='flex flex-col md:grid md:grid-cols-2 gap-3 w-full  bg-gradient-to-r from-gray-800 from-30% to-purple-900 text-white p-2 rounded-lg md:mx-auto'>
           <Select data={[
             { value: '5', label: '5' },
             { value: '10', label: '10' },
@@ -27,7 +27,9 @@ const AddProperty = () => {
             width={10}
             onChange={setValue}
             label='Property Category'
+            styles={{ label: { color: 'white', fontWeight: 'bold' }}}
           />
+          
           <CustomInput forHtml='location' type='number' labelText='Enter Location Number (You can edit)' placeholderTxt='0739832893' required={true} />
           <Select data={[
             { value: '5', label: '5' },
@@ -42,6 +44,7 @@ const AddProperty = () => {
             width={10}
             onChange={setValue}
             label='Select County'
+            styles={{ label: { color: 'white', fontWeight: 'bold' } }}
           />
           <CustomInput forHtml='location' type='number' labelText='Managed by' placeholderTxt='0739832893' required={true} />
           <CustomInput forHtml='location' type='number' labelText='Property Name' placeholderTxt='0739832893' required={true} />
@@ -59,8 +62,9 @@ const AddProperty = () => {
             width={10}
             onChange={setValue}
             label='Select Payment Basis:'
+            styles={{ label: { color: 'white', fontWeight: 'bold' } }}
           />
-          <Textarea label="Property description" />
+          <Textarea label="Property description" styles={{ label: { color: 'white', fontWeight: 'bold' } }} />
         </div>
 
         <div className='flex flex-col gap-3 bg-white mt-2 p-2'>
