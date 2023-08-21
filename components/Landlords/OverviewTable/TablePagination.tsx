@@ -1,33 +1,60 @@
-import React from 'react'
+'use client'
+
+import { Pagination } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
+import React, { useEffect, useState } from 'react'
 
 const TablePagination = () => {
+    const [activePage, setActivePage] = useState(1);
+    const [itemsPerPage, setItemsPerPage] = useState(10);
+    const [value, setValue] = useState<string | null>('10');
+    const isSmallScreen = useMediaQuery('(max-width: 640px)')
+    const isLargeScreen = useMediaQuery('(min-width: 1440px)')
+    const arr = new Array(50);
+    arr.fill(0);
+    const nums = arr.map((_, index) => index + 1)
+
+
+    const handlePageChange = (page: number) => {
+        setActivePage(page);
+        if (typeof localStorage !== 'undefined') {
+            localStorage.setItem('activePage', page.toString());
+        }
+    };
+
+    useEffect(() => {
+        if (typeof localStorage !== 'undefined') {
+            localStorage.setItem('activePage', activePage.toString());
+        }
+    }, [activePage]);
+
+    useEffect(() => {
+        setItemsPerPage(parseInt(value || '10'));
+    }, [value])
+
+    const totalPages = Math.ceil(nums.length / itemsPerPage);
+    const startIndex = (activePage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const displayedItems = nums.slice(startIndex, endIndex);
   return (
-      <nav className="flex items-center justify-between pt-4" aria-label="Table navigation">
-          <span className="text-sm font-normal text-gray-500 ">Showing <span className="font-semibold text-gray-900">1-10</span> of <span className="font-semibold text-gray-900">1000</span></span>
-          <ul className="inline-flex -space-x-px text-sm h-8">
-              <li>
-                  <a href="#" className="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700">Previous</a>
-              </li>
-              <li>
-                  <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">1</a>
-              </li>
-              <li>
-                  <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">2</a>
-              </li>
-              <li>
-                  <a href="#" aria-current="page" className="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700">3</a>
-              </li>
-              <li>
-                  <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">4</a>
-              </li>
-              <li>
-                  <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">5</a>
-              </li>
-              <li>
-                  <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700">Next</a>
-              </li>
-          </ul>
-      </nav>
+      <div className='flex items-center justify-center w-full py-4'>
+          <Pagination
+              value={activePage}
+              onChange={handlePageChange}
+              total={totalPages}
+              withEdges
+              radius='md'
+              spacing={isSmallScreen ? 'sm' : 'lg'}
+              size='sm'
+              styles={(theme) => ({
+                  control: {
+                      '&[data-active]': {
+                          backgroundImage: theme.fn.gradient({ from: 'red', to: 'yellow' }),
+                          border: 0,
+                      },
+                  },
+              })} />
+      </div>
   )
 }
 
