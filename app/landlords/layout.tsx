@@ -1,5 +1,5 @@
 import { SidebarProvider } from '@/Context/SidebarContext'
-import LandlordLayout from '@/components/Landlords/LandlordLayout'
+import LandlordLayout from '@/components/Landlords/Layout/LandlordLayout'
 
 export const metadata = {
     title: 'Renters Hub',
