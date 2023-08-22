@@ -30,3 +30,10 @@ export type SortButtonType = {
     hoverBg?: string
 }
 
+
+export type LandlordsSideBarItems = {
+    href: string,
+      icon: string | StaticImport,
+      altText: string
+      text: string
+}

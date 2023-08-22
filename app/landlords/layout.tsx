@@ -1,5 +1,5 @@
 import { SidebarProvider } from '@/Context/SidebarContext'
-import LandlordLayout from '@/components/Landlords/LandlordLayout'
+import LandlordLayout from '@/components/Landlords/Layout/LandlordLayout'
 
 export const metadata = {
     title: 'Renters Hub',
@@ -12,12 +12,10 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
-            <body className='font-ff-poppins'>
+            <section className='font-ff-poppins'>
                 <SidebarProvider>
                     <LandlordLayout>{children}</LandlordLayout>
                 </SidebarProvider>
-            </body>
-        </html>
+            </section>
     )
 }

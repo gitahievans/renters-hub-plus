@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import React from 'react'
-import Logo from '@/public/icons/house.gif'
+import Logo from '@/public/icons/apartment.png'
 import Image from 'next/image'
 import { NavLinks } from '@/Constants/constants';
 import callIcon from '@/public/icons/phone-call.svg';
