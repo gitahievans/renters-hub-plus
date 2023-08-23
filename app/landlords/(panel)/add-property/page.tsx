@@ -10,8 +10,8 @@ const AddProperty = () => {
   const [value, setValue] = useState<string | null>('10');
 
   return (
-    <div className='flex flex-col gap-3 min-h-full p-1 my-2 max-w-7xl mx-auto'>
-      <h1 className='text-2xl font-semibold'>Add New Property</h1>
+    <div className='flex flex-col gap-3 min-h-full p-1 m-2 xl:max-w-7xl'>
+      <h1 className='text-xl md:text-3xl uppercase font-semibold'>Add New Property</h1>
       <form action="" className='flex flex-col gap-3' >
         <div className='flex flex-col md:grid md:grid-cols-2 gap-3 w-full bg-gray-100 p-2 rounded-lg md:mx-auto'>
           <Select data={[

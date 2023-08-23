@@ -6,7 +6,8 @@ import CustomButton from '@/components/CustomButton';
 
 const Profile = () => {
     return (
-        <section className='min-h-[100dvh] max-w-sm mx-auto'>
+        <section className='min-h-[100dvh] max-w-sm md:max-w-md mx-auto'>
+            <h1 className='text-xl md:text-3xl uppercase font-semibold text-center'>Edit your profile</h1>
             <div className='flex items-center justify-center'>
                 <Image src={avatar} alt='Evans' width={150} />
                 <h1 className='font-font-2 font-semibold text-xl'>Evans Gitahi</h1>
