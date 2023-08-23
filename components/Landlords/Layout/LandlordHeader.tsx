@@ -2,10 +2,10 @@
 
 import Image from 'next/image'
 import React, { useContext } from 'react'
-import callIcon from '@/public/icons/calling.png';
+import avatar from '@/public/icons/avatar.svg';
 import { SidebarContext } from '@/Context/SidebarContext';
-import { Input } from '@mantine/core';
-
+import Link from 'next/link';
+import backHomeIcon from '@/public/images/solar-cell.png';
 const LandlordHeader = () => {
     const { sidebarOpen, setSidebarOpen } = useContext(SidebarContext)
 
@@ -20,15 +20,22 @@ const LandlordHeader = () => {
                                 <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                             </svg>
                         </button>
-                        <Input placeholder="Search" className='hidden md:block' />
+                        <input type='text' className="border border-gray-200 text-sm rounded-lg focus:ring-blue-500 focus:outline-blue-300 bg-blue-900 w-full p-2.5 focus:bg-blue-200 transition-all duration-500 text-gray-200 placeholder:text-gray-200" placeholder='Search' />
                     </div>
                     <div className="flex items-center">
+
+                        <Link href='#' >
+                            <div className='flex items-center gap-2'>
+                                <p>Back to main website</p>
+                                <Image className="w-8 h-8" src={backHomeIcon} alt="user photo" width={500} height={500} />
+                            </div>
+                        </Link>
                         <div className="flex items-center ml-3">
                             <div className='flex items-center gap-2 '>
                                 <h3>Evans Gitahi</h3>
                                 <button type="button" className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300" aria-expanded="false" data-dropdown-toggle="dropdown-user">
                                     <span className="sr-only">Open user menu</span>
-                                    <Image className="w-8 h-8 rounded-full" src={callIcon} alt="user photo" width={500} height={500} />
+                                    <Image className="w-8 h-8 rounded-full" src={avatar} alt="user photo" width={500} height={500} />
                                 </button>
                             </div>
                             <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow" id="dropdown-user">
