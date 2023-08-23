@@ -11,7 +11,7 @@ import userIcon from '@/public/icons/user.png';
 const Overview = () => {
 
     return (
-        <div className='flex flex-col gap-4 min-h-screen p-1 my-2 md:max-w-3xl lg:max-w-7xl mx-auto'>
+        <div className='flex flex-col gap-4 min-h-screen p-1 my-2 md:max-w-3xl lg:max-w-7xl'>
             <div className='flex flex-col gap-4 w-full lg:w-1/2  bg-white p-2 rounded-lg bg-gradient-to-r from-gray-800 from-50% to-purple-900 text-white'>
                 <div className='w-full flex justify-between items-center '>
                     <div className='flex flex-col gap-3'>
