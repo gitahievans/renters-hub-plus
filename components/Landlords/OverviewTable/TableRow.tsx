@@ -4,7 +4,7 @@ import house from '@/public/images/house.jpg'
 
 const TableRow = () => {
   return (
-      <tr className="bg-gray-200 border-b border-b-gray-400 group hover:bg-gray-400 overflow-x-auto">
+      <tr className="bg-gray-200 border-b border-b-gray-400 group hover:bg-gray-300 overflow-x-auto">
           <td className="w-4 p-4">
               <div className="flex items-center">
                   <input
@@ -27,9 +27,9 @@ const TableRow = () => {
               <div className="flex items-center">09/23/2023</div>
           </td>
           <td className="px-6 py-4">
-              <a href="#" className="font-medium text-green-600 hover:underline group-hover:text-green-300">
-                  Approved
-              </a>
+              <div className=" bg-green-700 py-2 rounded-lg flex justify-center">
+                  <p className='font-medium text-gray-100'>Approved</p>
+              </div>
           </td>
       </tr>
   )
